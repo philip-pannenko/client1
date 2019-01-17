@@ -14,7 +14,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:8080/api/messages")
+        fetch("api/messages")
             .then(res => res.json())
             .then(
                 (result) => {
@@ -31,7 +31,7 @@ class App extends Component {
                 }
             );
 
-        fetch("http://localhost:8888/application/message")
+        fetch("application/message")
             .then(res => res.json())
             .then(result => {
                     let configMessage = result.propertySources[0].source.message;

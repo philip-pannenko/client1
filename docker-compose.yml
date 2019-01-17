@@ -1,0 +1,14 @@
+version: '3'
+services:
+  client:
+    image: aistated/net.pannenko.cicd.client1
+    environment:
+      VIRTUAL_HOST: $VIRTUAL_HOST
+    networks:
+      - ops_ops-network
+      - ops_client-proxy-network
+networks:
+  ops_ops-network:
+    external: true
+  ops_client-proxy-network:
+    external: true
