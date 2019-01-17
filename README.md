@@ -11,5 +11,3 @@ In order to publish the repository
 npm adduser 
 npm publish --access=public
 ```
-
-`docker run -p 80:80 aistated/net.pannenko.cicd.client1`

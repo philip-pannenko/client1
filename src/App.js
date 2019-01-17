@@ -31,7 +31,7 @@ class App extends Component {
                 }
             );
 
-        fetch("http://localhost:8888/application/message")
+        fetch("http://localhost:8888/cicd/message")
             .then(res => res.json())
             .then(result => {
                     let configMessage = result.propertySources[0].source.message;

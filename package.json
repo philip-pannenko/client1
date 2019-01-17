@@ -1,5 +1,5 @@
 {
-  "name": "net.pannenko.cicd.client1",
+  "name": "@lablenge/client1",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -39,7 +39,8 @@
     "extends": "react-app"
   },
   "config": {
-    "imageRepo": "aistated/net.pannenko.cicd.client1",
+    "imageRepo": "net.pannenko.cicd/client1",
+    "imageName": "client1",
     "imagePort": "80"
   },
   "browserslist": [
