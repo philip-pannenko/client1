@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Checkout') {
             steps {
                 dir('client1') {
                      git branch: '$branch', changelog: false, credentialsId: 'dc2a91e1-d778-42e1-95ac-8a2313feba82', poll: false, url: 'https://github.com/philip-pannenko/client1.git' 
@@ -14,14 +14,14 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
+        stage('Build') {
             steps {
-                echo 'Testing..'
+                sh 'npm install'
             }
         }
-        stage('Deploy') {
+        stage('Create Docker') {
             steps {
-                echo 'Deploying....'
+                sh 'npm run docker:build
             }
         }
     }
