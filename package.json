@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@lablenge/client-utils": "^1.0.0",
+    "properties": "^1.2.1",
+    "properties-parser": "^0.3.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3"

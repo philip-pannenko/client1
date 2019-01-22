@@ -23,8 +23,8 @@ http {
             proxy_pass http://${COMPOSE_PROJECT_NAME}-server1:8080/api;
         }
 
-        location /application {
-            proxy_pass http://cloud-config:8888/application;
+        location /config.properties {
+            proxy_pass http://cloud-config:8888/${COMPOSE_PROJECT_NAME}/application-${COMPOSE_PROJECT_NAME}.properties;
         }
 
     }
