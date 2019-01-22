@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+// import properties from 'properties';
+import prop from 'properties-parser'; 
+
 import ModifyMessage from '@lablenge/client-utils';
 
 class App extends Component {
@@ -31,13 +34,14 @@ class App extends Component {
                 }
             );
 
-        fetch("application/message")
-            .then(res => res.json())
+        fetch("config.properties")
+            .then(result => result.text())
             .then(result => {
-                    let configMessage = result.propertySources[0].source.message;
-                    this.setState({configMessage});
-                }
-            )
+
+                let config = prop.parse(result);
+
+                this.setState({configMessage: config.message});
+            })
 
     }
 
