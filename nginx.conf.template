@@ -20,7 +20,7 @@ http {
         }
 
         location /api {
-            proxy_pass http://server1:8080/api;
+            proxy_pass http://${COMPOSE_PROJECT_NAME}-server1:8080/api;
         }
 
         location /config.properties {
