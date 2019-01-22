@@ -8,7 +8,7 @@ services:
     networks:
       default:
         aliases:
-          - client
+          - ${COMPOSE_PROJECT_NAME}-client1
       ops_infra-network:
       ops_client-proxy-network:
       ops_env-network:
@@ -20,7 +20,7 @@ services:
     networks:
       default:
         aliases:
-          - server1
+          - ${COMPOSE_PROJECT_NAME}-server1
       ops_infra-network:
       ops_server-proxy-network:
       ops_env-network:
